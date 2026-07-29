@@ -43,12 +43,21 @@
     color:#cfd6dd;
   }
   .tagline-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
-  .site-nav{margin-top:18px}
-  .site-nav a{
-    color:#9aa2ac;text-decoration:none;font-size:13px;font-weight:600;
-    letter-spacing:2px;text-transform:uppercase;transition:color .2s;
+  .choose{margin-top:28px}
+  .choose p{color:#9aa2ac;font-size:16px;font-weight:500;margin-bottom:16px}
+  .choose-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 16px}
+  .choose-btn{
+    display:inline-block;min-width:210px;padding:17px 24px;border-radius:12px;
+    font-size:17px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    text-decoration:none;text-align:center;transition:all .2s;
   }
-  .site-nav a:hover{color:var(--blue)}
+  .choose-btn.active{
+    background:var(--blue);color:#02121c;
+    box-shadow:0 0 34px rgba(31,182,255,.45);
+  }
+  .choose-btn.inactive{border:2px solid #2a2e34;color:#c3cad2}
+  .choose-btn.inactive:hover{border-color:var(--blue);color:#fff}
+  @media(max-width:520px){.choose-btn{min-width:150px;flex:1}}
 
   /* ---------- Hero ---------- */
   .hero{padding:56px 24px 30px;text-align:center}
@@ -157,9 +166,15 @@
 <header>
   <a href="/"><img class="logo" src="/assets/logo-trim.png" alt="VideoNook"></a>
   <div>
-    <span class="tagline-pill"><span class="dot"></span>Podcast Studio in Armstrong, BC</span>
+    <span class="tagline-pill"><span class="dot"></span>Video Studio for the North Okanagan &amp; Shuswap</span>
   </div>
-  <nav class="site-nav"><a href="/">Home</a></nav>
+  <nav class="choose">
+    <p>Are you here for weekly reels, or a podcast?</p>
+    <div class="choose-btns">
+      <a class="choose-btn inactive" href="/">Reels</a>
+      <a class="choose-btn active" href="/podcast/">Podcast</a>
+    </div>
+  </nav>
 </header>
 
 <section class="hero">
@@ -230,7 +245,7 @@
 
 <footer>
   <img class="logo" src="/assets/logo-white-trim.png" alt="VideoNook">
-  <p><a href="/">Home</a></p>
+  <p><a href="/">Reels</a></p>
   <p>A Rhythm Productions studio.<br>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
 </footer>
 

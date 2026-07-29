@@ -44,12 +44,21 @@
     color:#cfd6dd;
   }
   .tagline-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
-  .site-nav{margin-top:18px}
-  .site-nav a{
-    color:#9aa2ac;text-decoration:none;font-size:13px;font-weight:600;
-    letter-spacing:2px;text-transform:uppercase;transition:color .2s;
+  .choose{margin-top:28px}
+  .choose p{color:#9aa2ac;font-size:16px;font-weight:500;margin-bottom:16px}
+  .choose-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 16px}
+  .choose-btn{
+    display:inline-block;min-width:210px;padding:17px 24px;border-radius:12px;
+    font-size:17px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    text-decoration:none;text-align:center;transition:all .2s;
   }
-  .site-nav a:hover{color:var(--blue)}
+  .choose-btn.active{
+    background:var(--blue);color:#02121c;
+    box-shadow:0 0 34px rgba(31,182,255,.45);
+  }
+  .choose-btn.inactive{border:2px solid #2a2e34;color:#c3cad2}
+  .choose-btn.inactive:hover{border-color:var(--blue);color:#fff}
+  @media(max-width:520px){.choose-btn{min-width:150px;flex:1}}
 
   /* ---------- Hero ---------- */
   .hero{padding:36px 24px 0}
@@ -82,11 +91,6 @@
     margin-top:26px;font-size:clamp(16px,1.6vw,21px);color:#dde3e8;font-weight:400;
     text-shadow:0 1px 20px rgba(0,0,0,.7);
   }
-  .scroll-arrow{
-    text-align:center;padding:34px 0 6px;color:#aab2bb;font-size:26px;
-    animation:bob 2s ease-in-out infinite;
-  }
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
   /* ---------- Works video ---------- */
   .works{padding:60px 24px 30px}
@@ -157,8 +161,15 @@
     padding:clamp(32px,5vw,48px) clamp(24px,4vw,42px);
     box-shadow:0 0 60px rgba(31,182,255,.07);
   }
-  .price-card .brand{text-align:center;font-size:26px;font-weight:700;margin-bottom:6px}
-  .price-card .price{text-align:center;font-size:clamp(30px,3.4vw,40px);font-weight:800;margin-bottom:34px}
+  .price-row{
+    max-width:1100px;margin:0 auto;display:grid;
+    grid-template-columns:1fr 1fr;gap:22px;align-items:start;
+  }
+  .price-row .price-card{max-width:none;margin:0}
+  @media(max-width:900px){.price-row{grid-template-columns:1fr;max-width:552px}}
+  .pcard-title{text-align:center;font-size:clamp(21px,2.3vw,26px);font-weight:700;margin-bottom:20px}
+  .pcard-body{color:#c3cad2;font-size:16px;line-height:1.8}
+  .form-card{max-width:552px;margin:22px auto 0}
   .features{list-style:none;margin-bottom:34px}
   .features li{
     display:flex;align-items:center;gap:14px;
@@ -192,10 +203,6 @@
   .form-success .big{font-size:22px;font-weight:700;color:var(--blue);margin-bottom:12px}
   .form-success p{color:#c3cad2;font-size:16px;line-height:1.7}
   .sub-note{text-align:center;color:#6f7680;font-size:15px;margin:34px 0 0}
-  .studio-note{
-    text-align:center;color:#6f7680;font-size:13.5px;line-height:1.7;
-    max-width:560px;margin:18px auto 0;padding:0 8px;
-  }
   .price-block{text-align:center;margin-bottom:26px}
   .price-block .was{
     font-size:clamp(19px,2.2vw,24px);font-weight:700;color:#6b7280;
@@ -249,9 +256,15 @@
 <header>
   <img class="logo" src="assets/logo-trim.png" alt="VideoNook">
   <div>
-    <span class="tagline-pill"><span class="dot"></span>Weekly Video Reels for the North Okanagan &amp; Shuswap</span>
+    <span class="tagline-pill"><span class="dot"></span>Video Studio for the North Okanagan &amp; Shuswap</span>
   </div>
-  <nav class="site-nav"><a href="/podcast/">Podcast Studio</a></nav>
+  <nav class="choose">
+    <p>Are you here for weekly reels, or a podcast?</p>
+    <div class="choose-btns">
+      <a class="choose-btn active" href="/">Reels</a>
+      <a class="choose-btn inactive" href="/podcast/">Podcast</a>
+    </div>
+  </nav>
 </header>
 
 <section class="hero">
@@ -265,7 +278,6 @@
       <p>Show up in their feed every week, without lifting a finger.</p>
     </div>
   </div>
-  <div class="scroll-arrow">↓</div>
 </section>
 
 <section class="works">
@@ -279,10 +291,9 @@
 <section class="cost">
   <h2 class="section-title">The Cost of Staying <span class="strike">Invisible</span></h2>
   <div class="cost-card">
-    <h3>The Cost of Staying Invisible</h3>
     <div class="cost-quote">You know the feeling. Another week without posting. The nagging thought: <b>"I really should…"</b></div>
-    <p>Meanwhile, your competitors are showing up. Week after week, their face is in the feed. They're not better than you, but when someone in your community is finally ready to buy, guess who comes to mind first?</p>
-    <div class="cost-callout">It's not the best. It's whoever they've been seeing. Whoever they feel like they already know.</div>
+    <p>Meanwhile, your competitors are showing up. Week after week, their face is in your clients' feed. They're not necessarily better than you, but when someone in your community is finally ready to buy, guess who comes to mind first?</p>
+    <div class="cost-callout">It's not the best that gets the call, it's whoever they've been seeing. Whoever they feel like they already know.</div>
     <p>A year from now, you won't regret becoming the face everyone recognizes. You'll regret staying invisible, knowing you almost did something about it.</p>
     <p class="cost-good">The good news? It takes less than you think.</p>
   </div>
@@ -331,24 +342,34 @@
 
 <section class="cta" id="contact">
   <h2 class="section-title">Ready to Stay Visible?</h2>
-  <div class="price-card">
-    <div class="brand">VideoNook</div>
-    <div class="price-block">
-      <div class="was">$497/month</div>
-      <div class="now">$397/month</div>
-      <div class="special">August Special Rate. Locked in for the rest of the year. List price $497 from January 1.</div>
-      <div class="spots">6 August spots. When they're filled, they're filled.</div>
+  <div class="price-row">
+    <div class="price-card">
+      <div class="pcard-title">We record your reels</div>
+      <div class="price-block">
+        <div class="was">$497/month</div>
+        <div class="now">$397/month</div>
+        <div class="special">August Special Rate. Locked in for the rest of the year. List price $497 from January 1.</div>
+        <div class="spots">6 August spots. When they're filled, they're filled.</div>
+      </div>
+      <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
+      <ul class="features">
+        <li><span class="check">✓</span>4 reels delivered monthly</li>
+        <li><span class="check">✓</span>A content strategy built around why customers choose you</li>
+        <li><span class="check">✓</span>Done-for-you scripting</li>
+        <li><span class="check">✓</span>Monthly one-hour studio session</li>
+        <li><span class="check">✓</span>On-camera coaching</li>
+        <li><span class="check">✓</span>Edited and captioned, post copy included</li>
+      </ul>
     </div>
-    <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
-    <ul class="features">
-      <li><span class="check">✓</span>4 reels delivered monthly</li>
-      <li><span class="check">✓</span>A content strategy built around why customers choose you</li>
-      <li><span class="check">✓</span>Done-for-you scripting</li>
-      <li><span class="check">✓</span>Monthly one-hour studio session</li>
-      <li><span class="check">✓</span>On-camera coaching</li>
-      <li><span class="check">✓</span>Edited and captioned, post copy included</li>
-    </ul>
-    <hr class="price-divider">
+    <div class="price-card">
+      <div class="pcard-title">You record your reels</div>
+      <div class="price-block">
+        <div class="now">$197/mo</div>
+      </div>
+      <p class="pcard-body">A 30-minute studio session every month. You bring the ideas and do the talking; we run the camera, lights, and sound. Teleprompter's set up if you've got a script. Vertical single camera 1080p recording, and you walk out with your raw files.</p>
+    </div>
+  </div>
+  <div class="price-card form-card">
     <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
       <input type="hidden" name="form-name" value="contact">
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -365,7 +386,6 @@
     </div>
   </div>
   <p class="sub-note">Monthly billing. Three-month minimum, cancel anytime after.</p>
-  <p class="studio-note">Just want the room and us to run the gear and give you the raw files? Record-your-reels studio sessions are $197/mo. Mention it when you reach out.</p>
 </section>
 
 <section class="faq">
