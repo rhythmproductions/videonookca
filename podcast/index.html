@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Podcast Studio | Armstrong, North Okanagan | VideoNook</title>
+<meta name="description" content="Record your video podcast in Armstrong. Two-angle 1080p video, engineered audio, same-day files. Serving Vernon, Salmon Arm, and the North Okanagan.">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1fb6ff;
+    --blue-soft:#2fb9f7;
+    --bg:#000000;
+    --card:#131518;
+    --card-2:#1b1e23;
+    --line:#1e2126;
+    --text:#e9edf1;
+    --muted:#c3cad2;
+    --dim:#9aa2ac;
+    --faint:#6f7680;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Poppins',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* ---------- Header ---------- */
+  header{padding:44px 24px 8px;text-align:center}
+  header .logo{width:250px;max-width:70vw;height:auto;display:inline-block}
+  .tagline-pill{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#141619;border:1px solid #1d2025;border-radius:999px;
+    padding:9px 20px;margin-top:18px;
+    font-size:12.5px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;
+    color:#cfd6dd;
+  }
+  .tagline-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
+  .site-nav{margin-top:18px}
+  .site-nav a{
+    color:#9aa2ac;text-decoration:none;font-size:13px;font-weight:600;
+    letter-spacing:2px;text-transform:uppercase;transition:color .2s;
+  }
+  .site-nav a:hover{color:var(--blue)}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:56px 24px 30px;text-align:center}
+  .hero h1{
+    font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1.15;
+    letter-spacing:-.5px;max-width:900px;margin:0 auto;
+  }
+  .hero h1 .blue{color:var(--blue)}
+  .hero p{
+    margin:24px auto 0;font-size:clamp(16px,1.7vw,21px);color:#c3cad2;
+    font-weight:400;max-width:760px;line-height:1.65;
+  }
+
+  /* ---------- Section titles ---------- */
+  .section-title{
+    text-align:center;font-size:clamp(32px,4.2vw,50px);font-weight:800;
+    letter-spacing:-.5px;line-height:1.15;
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing{padding:60px 24px 20px}
+  .price-card{
+    max-width:720px;margin:0 auto 26px;background:#101215;
+    border:1px solid rgba(47,185,247,.4);border-radius:16px;
+    padding:clamp(30px,4.5vw,44px) clamp(24px,4vw,42px);
+    box-shadow:0 0 60px rgba(31,182,255,.07);
+  }
+  .price-card h3{font-size:clamp(21px,2.4vw,27px);font-weight:700;line-height:1.35;margin-bottom:6px}
+  .price-card h3 .amount{color:var(--blue);white-space:nowrap}
+  .price-card .body{color:#c3cad2;font-size:clamp(15px,1.7vw,17.5px);line-height:1.75;margin-top:14px}
+  .sales-line{
+    font-style:italic;color:#9aa2ac;font-size:15px;line-height:1.7;margin-top:20px;
+  }
+  .extras{list-style:none;margin-top:22px;border-top:1px solid #22262b;padding-top:22px}
+  .extras li{
+    display:flex;gap:12px;color:#c3cad2;font-size:15.5px;line-height:1.7;padding:5px 0;
+  }
+  .extras .plus{color:var(--blue);font-weight:700;flex:none}
+  .mini-cards{
+    max-width:720px;margin:0 auto;display:grid;
+    grid-template-columns:1fr;gap:18px;
+  }
+  .mini-card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:26px 30px;
+  }
+  .mini-card h4{font-size:clamp(18px,2vw,21px);font-weight:700;margin-bottom:8px}
+  .mini-card h4 .amount{color:var(--blue);white-space:nowrap}
+  .mini-card p{color:#b9c0c9;font-size:15.5px;line-height:1.75}
+
+  /* ---------- CTA ---------- */
+  .cta{padding:90px 24px 60px}
+  .cta .section-title{margin-bottom:48px}
+  .form-card{
+    max-width:552px;margin:0 auto;background:#101215;
+    border:1px solid rgba(47,185,247,.4);border-radius:16px;
+    padding:clamp(32px,5vw,48px) clamp(24px,4vw,42px);
+    box-shadow:0 0 60px rgba(31,182,255,.07);
+  }
+  .contact-form input,.contact-form textarea{
+    width:100%;background:#0b0d0f;border:1px solid #22262b;border-radius:10px;
+    padding:16px 18px;margin-bottom:16px;color:var(--text);
+    font-family:'Poppins',sans-serif;font-size:15.5px;outline:none;
+    transition:border-color .2s;
+  }
+  .contact-form input:focus,.contact-form textarea:focus{border-color:var(--blue-soft)}
+  .contact-form ::placeholder{color:#7d858f}
+  .contact-form textarea{resize:vertical;min-height:92px}
+  .btn-connect{
+    width:100%;background:var(--blue);color:#02121c;border:none;border-radius:12px;
+    padding:18px;font-family:'Poppins',sans-serif;font-size:19px;font-weight:700;
+    cursor:pointer;margin-top:4px;
+    box-shadow:0 0 34px rgba(31,182,255,.45);
+    transition:transform .15s,box-shadow .2s;
+  }
+  .btn-connect:hover{transform:translateY(-1px);box-shadow:0 0 46px rgba(31,182,255,.6)}
+  .form-note{
+    margin-top:26px;color:#8d95a0;font-size:14.5px;line-height:1.7;text-align:center;
+  }
+  .form-success{display:none;text-align:center;padding:26px 6px 6px}
+  .form-success .big{font-size:22px;font-weight:700;color:var(--blue);margin-bottom:12px}
+  .form-success p{color:#c3cad2;font-size:16px;line-height:1.7}
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:40px 24px 90px}
+  .faq .section-title{margin-bottom:52px}
+  .faq-list{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:32px 38px;
+  }
+  .faq-item h4{font-size:clamp(18px,2vw,22px);font-weight:700;margin-bottom:16px}
+  .faq-item p{color:#b9c0c9;font-size:clamp(15px,1.7vw,18px);line-height:1.75}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid #101215;padding:64px 24px 56px;text-align:center}
+  footer .logo{width:88px;height:auto;opacity:.85;margin-bottom:22px}
+  footer p{color:#6f7680;font-size:15px;line-height:1.8}
+  footer a{color:#8d95a0;text-decoration:none}
+
+  @media(max-width:560px){.faq-item{padding:26px 24px}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/"><img class="logo" src="/assets/logo-trim.png" alt="VideoNook"></a>
+  <div>
+    <span class="tagline-pill"><span class="dot"></span>Podcast Studio in Armstrong, BC</span>
+  </div>
+  <nav class="site-nav"><a href="/">Home</a></nav>
+</header>
+
+<section class="hero">
+  <h1>Record Your Video Podcast <span class="blue">in Armstrong</span></h1>
+  <p>The North Okanagan's video-first podcast studio. Two camera angles, engineered audio, files in your hand the same day.</p>
+</section>
+
+<section class="pricing">
+  <div class="price-card">
+    <h3>Record your video podcast: <span class="amount">$497/session</span></h3>
+    <p class="body">Up to 90 minutes in studio, up to 60 minutes recorded, two people. One horizontal 1080p video file, auto-cut live between 2 angles as you talk, audio baked in, plus the audio track on its own so you can publish to podcast platforms. You leave with your files. No editing.</p>
+    <p class="sales-line">You're not renting an empty room. Your session's run by a guy who's been filming professionally since 2018.</p>
+    <ul class="extras">
+      <li><span class="plus">+</span>Extra person: +$50/seat. Optional extra camera, to a max of 3 cameras total.</li>
+      <li><span class="plus">+</span>Raw files: +$97. Every individual camera and audio file, delivered within 24 hrs.</li>
+      <li><span class="plus">+</span>4K upgrade: +$147. Recorded in 4K on the cameras, raw files included, within 48 hrs.</li>
+    </ul>
+  </div>
+  <div class="mini-cards">
+    <div class="mini-card">
+      <h4>Produced episodes: <span class="amount">starting at $997</span></h4>
+      <p>Multicam edit, mixed audio, basic titles.</p>
+    </div>
+    <div class="mini-card">
+      <h4>Prepaid 4-pack: <span class="amount">$1,788</span></h4>
+      <p>4x Record your video podcast sessions, use within 6 months.</p>
+    </div>
+    <div class="mini-card">
+      <h4>Launch setup: <span class="amount">$297, one time</span></h4>
+      <p>One-time setup of all your back end on your platforms, so it's ready for you to publish the content we create. We set up your hosting platform, your distribution to Spotify, Apple Podcasts, and YouTube, and get your cover art in place. Everything's connected and ready, so all you do is upload your files and hit publish.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2 class="section-title">Ready to Hit Record?</h2>
+  <div class="form-card">
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone (Optional)">
+      <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
+      <button type="submit" class="btn-connect">Book a Session</button>
+      <p class="form-note">Not sure if this is right for you? No pressure. Just share your info and I'll reach out to answer any questions.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="big">Thanks! Message received.</div>
+      <p>I'll reach out shortly to answer your questions and get your session booked.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2 class="section-title">Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h4>Where is the studio?</h4>
+      <p>The studio's in Armstrong. Tons of parking, easy highway access.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need my own equipment?</h4>
+      <p>No. Cameras, mics, lighting, and an engineer are all included. You just bring the conversation.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="logo" src="/assets/logo-white-trim.png" alt="VideoNook">
+  <p><a href="/">Home</a></p>
+  <p>A Rhythm Productions studio.<br>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = e.target;
+    var data = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:data
+    }).then(function(r){
+      if(r.ok){
+        form.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      }else{
+        alert('Something went wrong. Please email info@rhythmproductions.ca');
+      }
+    }).catch(function(){
+      alert('Something went wrong. Please email info@rhythmproductions.ca');
+    });
+  });
+</script>
+
+</body>
+</html>

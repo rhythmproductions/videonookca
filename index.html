@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VideoNook — Weekly Video Reels for the North Okanagan &amp; Shuswap</title>
-<meta name="description" content="Show up in their feed every week — without lifting a finger. Done-for-you weekly video reels for businesses in the North Okanagan & Shuswap.">
+<title>VideoNook | Video Podcast &amp; Content Studio | Armstrong BC</title>
+<meta name="description" content="Weekly video reels and video podcast recording for North Okanagan and Shuswap business owners. You show up one hour a month. I handle everything else.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +44,12 @@
     color:#cfd6dd;
   }
   .tagline-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
+  .site-nav{margin-top:18px}
+  .site-nav a{
+    color:#9aa2ac;text-decoration:none;font-size:13px;font-weight:600;
+    letter-spacing:2px;text-transform:uppercase;transition:color .2s;
+  }
+  .site-nav a:hover{color:var(--blue)}
 
   /* ---------- Hero ---------- */
   .hero{padding:36px 24px 0}
@@ -186,6 +192,33 @@
   .form-success .big{font-size:22px;font-weight:700;color:var(--blue);margin-bottom:12px}
   .form-success p{color:#c3cad2;font-size:16px;line-height:1.7}
   .sub-note{text-align:center;color:#6f7680;font-size:15px;margin:34px 0 0}
+  .studio-note{
+    text-align:center;color:#6f7680;font-size:13.5px;line-height:1.7;
+    max-width:560px;margin:18px auto 0;padding:0 8px;
+  }
+  .price-block{text-align:center;margin-bottom:26px}
+  .price-block .was{
+    font-size:clamp(19px,2.2vw,24px);font-weight:700;color:#6b7280;
+    text-decoration:line-through;text-decoration-thickness:3px;margin-bottom:2px;
+  }
+  .price-block .now{font-size:clamp(34px,3.8vw,46px);font-weight:800;line-height:1.15}
+  .price-block .special{margin-top:12px;color:var(--blue);font-size:15px;font-weight:600;line-height:1.6}
+  .price-block .spots{margin-top:8px;color:#c3cad2;font-size:15px;font-weight:600}
+  .sales-line{
+    font-style:italic;color:#9aa2ac;font-size:15px;line-height:1.7;
+    text-align:center;margin-bottom:30px;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials{padding:100px 24px 0}
+  .testimonials .section-title{margin-bottom:56px}
+  .quote-grid{
+    max-width:1060px;margin:0 auto;display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;
+  }
+  .quote-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 34px}
+  .quote-card p{color:#c9d0d8;font-size:16.5px;line-height:1.75;margin-bottom:20px}
+  .quote-card .attribution{color:#8d95a0;font-size:14px;line-height:1.6}
 
   /* ---------- FAQ ---------- */
   .faq{padding:110px 24px 90px}
@@ -218,6 +251,7 @@
   <div>
     <span class="tagline-pill"><span class="dot"></span>Weekly Video Reels for the North Okanagan &amp; Shuswap</span>
   </div>
+  <nav class="site-nav"><a href="/podcast/">Podcast Studio</a></nav>
 </header>
 
 <section class="hero">
@@ -228,7 +262,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Your Future Clients Are Already Scrolling.<span class="blue">They Just Haven't Found You Yet.</span></h1>
-      <p>Show up in their feed every week — without lifting a finger.</p>
+      <p>Show up in their feed every week, without lifting a finger.</p>
     </div>
   </div>
   <div class="scroll-arrow">↓</div>
@@ -247,9 +281,9 @@
   <div class="cost-card">
     <h3>The Cost of Staying Invisible</h3>
     <div class="cost-quote">You know the feeling. Another week without posting. The nagging thought: <b>"I really should…"</b></div>
-    <p>Meanwhile, your competitors are showing up. Week after week, their face is in the feed. They're not better than you — but when someone in your community is finally ready to buy, guess who comes to mind first?</p>
+    <p>Meanwhile, your competitors are showing up. Week after week, their face is in the feed. They're not better than you, but when someone in your community is finally ready to buy, guess who comes to mind first?</p>
     <div class="cost-callout">It's not the best. It's whoever they've been seeing. Whoever they feel like they already know.</div>
-    <p>A year from now, you won't regret becoming the face everyone recognizes. You'll regret staying invisible — knowing you almost did something about it.</p>
+    <p>A year from now, you won't regret becoming the face everyone recognizes. You'll regret staying invisible, knowing you almost did something about it.</p>
     <p class="cost-good">The good news? It takes less than you think.</p>
   </div>
 </section>
@@ -258,17 +292,17 @@
   <div class="process-head">
     <h2 class="section-title">Here's how I fix that.</h2>
   </div>
-  <p class="process-sub">Simple, Efficient, Consistent content – Completely handled for you.</p>
+  <p class="process-sub">Simple, Efficient, Consistent content. Completely handled for you.</p>
   <div class="steps">
     <div class="step">
       <span class="num">01</span>
       <h4>Strategy Session</h4>
-      <p>A 30–minute call where I learn your business. I figure out what they need to hear.</p>
+      <p>A 30-minute call where I learn your business. I figure out what they need to hear.</p>
     </div>
     <div class="step">
       <span class="num">02</span>
       <h4>Scripting</h4>
-      <p>I write the scripts — in your voice. Strategic. Sequenced. Designed to build trust.</p>
+      <p>I write the scripts, in your voice. Strategic. Sequenced. Designed to build trust.</p>
     </div>
     <div class="step">
       <span class="num">03</span>
@@ -283,18 +317,36 @@
   </div>
 </section>
 
+<!-- ---------- Testimonials (hidden until Kelly's Google review text is captured) ----------
+<section class="testimonials">
+  <h2 class="section-title">What clients say</h2>
+  <div class="quote-grid">
+    <div class="quote-card">
+      <p>"[Kelly's Google review text goes here once captured]"</p>
+      <div class="attribution">Kelly Brown, Royal LePage Vernon. Via Google Reviews.</div>
+    </div>
+  </div>
+</section>
+---------- End Testimonials ---------- -->
+
 <section class="cta" id="contact">
   <h2 class="section-title">Ready to Stay Visible?</h2>
   <div class="price-card">
     <div class="brand">VideoNook</div>
-    <div class="price">Contact for Pricing</div>
+    <div class="price-block">
+      <div class="was">$497/month</div>
+      <div class="now">$397/month</div>
+      <div class="special">August Special Rate. Locked in for the rest of the year. List price $497 from January 1.</div>
+      <div class="spots">6 August spots. When they're filled, they're filled.</div>
+    </div>
+    <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
     <ul class="features">
       <li><span class="check">✓</span>4 reels delivered monthly</li>
-      <li><span class="check">✓</span>Trust Architecture strategy</li>
+      <li><span class="check">✓</span>A content strategy built around why customers choose you</li>
       <li><span class="check">✓</span>Done-for-you scripting</li>
-      <li><span class="check">✓</span>Monthly studio session</li>
+      <li><span class="check">✓</span>Monthly one-hour studio session</li>
       <li><span class="check">✓</span>On-camera coaching</li>
-      <li><span class="check">✓</span>Edited with captions</li>
+      <li><span class="check">✓</span>Edited and captioned, post copy included</li>
     </ul>
     <hr class="price-divider">
     <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
@@ -304,15 +356,16 @@
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone (Optional)">
       <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
-      <button type="submit" class="btn-connect">Let's Connect</button>
-      <p class="form-note">Not sure if this is right for you? No pressure – just share your info and I'll reach out to answer any questions and see if VideoNook makes sense for your business.</p>
+      <button type="submit" class="btn-connect">Claim Your August Spot</button>
+      <p class="form-note">Not sure if this is right for you? No pressure. Just share your info and I'll reach out to answer any questions and see if VideoNook makes sense for your business.</p>
     </form>
     <div class="form-success" id="formSuccess">
-      <div class="big">Thanks — message received!</div>
+      <div class="big">Thanks! Message received.</div>
       <p>I'll reach out shortly to answer your questions and see if VideoNook makes sense for your business.</p>
     </div>
   </div>
-  <p class="sub-note">Monthly subscription. Cancel anytime.</p>
+  <p class="sub-note">Monthly billing. Three-month minimum, cancel anytime after.</p>
+  <p class="studio-note">Just want the room and us to run the gear and give you the raw files? Record-your-reels studio sessions are $197/mo. Mention it when you reach out.</p>
 </section>
 
 <section class="faq">
@@ -320,7 +373,7 @@
   <div class="faq-list">
     <div class="faq-item">
       <h4>How is this different from hiring a videographer?</h4>
-      <p>A videographer just hits record. I bring 15 years of sales experience to the table. I don't just capture footage; I build a strategy to help you connect with clients and grow your business. We're not making 'disposable content' — we're building trust assets.</p>
+      <p>A videographer just hits record. I bring over fifteen years of sales experience to the table. I don't just capture footage; I build a strategy to help you connect with clients and grow your business. We're not making disposable content. We're building trust assets.</p>
     </div>
     <div class="faq-item">
       <h4>Do I have to come up with ideas?</h4>
@@ -328,18 +381,19 @@
     </div>
     <div class="faq-item">
       <h4>What if I'm camera shy?</h4>
-      <p>Most people feel that way at first. The studio is set up to make it easy — teleprompter, good lighting, and I coach you through every take until it feels natural. By your second or third session, you won't think twice about it.</p>
+      <p>Most people feel that way at first. The studio is set up to make it easy: teleprompter, good lighting, and I coach you through every take until it feels natural. By your second or third session, you won't think twice about it.</p>
     </div>
     <div class="faq-item">
       <h4>Where is the studio?</h4>
-      <p>The studio is conveniently located in the North Okanagan. There is plenty of on site parking and easy to access.</p>
+      <p>The studio's in Armstrong. Tons of parking, easy highway access.</p>
     </div>
   </div>
 </section>
 
 <footer>
   <img class="logo" src="assets/logo-white-trim.png" alt="VideoNook">
-  <p>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
+  <p><a href="/podcast/" style="color:#8d95a0;text-decoration:none">Podcast Studio</a></p>
+  <p>A Rhythm Productions studio.<br>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
 </footer>
 
 <script>
@@ -356,10 +410,10 @@
         form.style.display='none';
         document.getElementById('formSuccess').style.display='block';
       }else{
-        alert('Something went wrong — please email info@rhythmproductions.ca');
+        alert('Something went wrong. Please email info@rhythmproductions.ca');
       }
     }).catch(function(){
-      alert('Something went wrong — please email info@rhythmproductions.ca');
+      alert('Something went wrong. Please email info@rhythmproductions.ca');
     });
   });
 </script>
