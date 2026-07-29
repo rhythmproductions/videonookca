@@ -47,8 +47,8 @@
   .choose p{color:#9aa2ac;font-size:16px;font-weight:500;margin-bottom:16px}
   .choose-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 16px}
   .choose-btn{
-    display:inline-block;min-width:210px;padding:17px 24px;border-radius:12px;
-    font-size:17px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    display:inline-block;min-width:315px;padding:24px 34px;border-radius:14px;
+    font-size:24px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
     text-decoration:none;text-align:center;transition:all .2s;
   }
   .choose-btn.active{
@@ -57,7 +57,7 @@
   }
   .choose-btn.inactive{border:2px solid #2a2e34;color:#c3cad2}
   .choose-btn.inactive:hover{border-color:var(--blue);color:#fff}
-  @media(max-width:520px){.choose-btn{min-width:150px;flex:1}}
+  @media(max-width:760px){.choose-btn{min-width:170px;flex:1;font-size:20px;padding:20px 20px}}
 
   /* ---------- Hero ---------- */
   .hero{padding:56px 24px 30px;text-align:center}
@@ -65,7 +65,7 @@
     font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1.15;
     letter-spacing:-.5px;max-width:900px;margin:0 auto;
   }
-  .hero h1 .blue{color:var(--blue)}
+  .hero h1 .blue{color:var(--blue);display:block}
   .hero p{
     margin:24px auto 0;font-size:clamp(16px,1.7vw,21px);color:#c3cad2;
     font-weight:400;max-width:760px;line-height:1.65;
@@ -179,7 +179,7 @@
 
 <section class="hero">
   <h1>Record Your Video Podcast <span class="blue">in Armstrong</span></h1>
-  <p>The North Okanagan's video-first podcast studio. Two camera angles, engineered audio, files in your hand the same day.</p>
+  <p>The North Okanagan's video-first podcast studio. Two camera angles, engineered audio, files in your hand when you leave.</p>
 </section>
 
 <section class="pricing">
@@ -204,7 +204,7 @@
     </div>
     <div class="mini-card">
       <h4>Launch setup: <span class="amount">$297, one time</span></h4>
-      <p>One-time setup of all your back end on your platforms, so it's ready for you to publish the content we create. We set up your hosting platform, your distribution to Spotify, Apple Podcasts, and YouTube, and get your cover art in place. Everything's connected and ready, so all you do is upload your files and hit publish.</p>
+      <p>One-time setup of all the back end on your chosen platforms, so it's ready for you to publish the content we create. We set up your hosting platform, your distribution to Spotify, Apple Podcasts, and YouTube, and get your cover art in place. Everything's connected and ready, so all you do is upload your files and hit publish.</p>
     </div>
   </div>
 </section>
@@ -219,7 +219,7 @@
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone (Optional)">
       <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
-      <button type="submit" class="btn-connect">Book a Session</button>
+      <button type="submit" class="btn-connect">Ask a Question</button>
       <p class="form-note">Not sure if this is right for you? No pressure. Just share your info and I'll reach out to answer any questions.</p>
     </form>
     <div class="form-success" id="formSuccess">
