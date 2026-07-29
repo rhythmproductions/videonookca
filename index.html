@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VideoNook — Weekly Video Reels for the North Okanagan &amp; Shuswap</title>
+<meta name="description" content="Show up in their feed every week — without lifting a finger. Done-for-you weekly video reels for businesses in the North Okanagan & Shuswap.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1fb6ff;
+    --blue-soft:#2fb9f7;
+    --bg:#000000;
+    --card:#131518;
+    --card-2:#1b1e23;
+    --line:#1e2126;
+    --text:#e9edf1;
+    --muted:#c3cad2;
+    --dim:#9aa2ac;
+    --faint:#6f7680;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Poppins',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .container{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Header ---------- */
+  header{padding:44px 24px 8px;text-align:center}
+  header .logo{width:250px;max-width:70vw;height:auto;display:inline-block}
+  .tagline-pill{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#141619;border:1px solid #1d2025;border-radius:999px;
+    padding:9px 20px;margin-top:18px;
+    font-size:12.5px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;
+    color:#cfd6dd;
+  }
+  .tagline-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:36px 24px 0}
+  .hero-card{
+    position:relative;max-width:1600px;margin:0 auto;
+    border-radius:26px;overflow:hidden;
+    height:min(78vh,720px);min-height:480px;
+    background:#0a0c0e;
+  }
+  .hero-card video{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:brightness(.55);
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,.25) 0%,rgba(0,0,0,.55) 100%);
+  }
+  .hero-content{
+    position:relative;z-index:2;height:100%;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:0 32px;
+  }
+  .hero h1{
+    font-size:clamp(38px,5.2vw,66px);font-weight:800;line-height:1.14;
+    letter-spacing:-.5px;max-width:1000px;
+    text-shadow:0 2px 30px rgba(0,0,0,.6);
+  }
+  .hero h1 .blue{color:var(--blue);display:block}
+  .hero p{
+    margin-top:26px;font-size:clamp(16px,1.6vw,21px);color:#dde3e8;font-weight:400;
+    text-shadow:0 1px 20px rgba(0,0,0,.7);
+  }
+  .scroll-arrow{
+    text-align:center;padding:34px 0 6px;color:#aab2bb;font-size:26px;
+    animation:bob 2s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+  /* ---------- Works video ---------- */
+  .works{padding:60px 24px 30px}
+  .works-frame{
+    max-width:900px;margin:0 auto;aspect-ratio:16/9;
+    border-radius:20px;overflow:hidden;background:#0a0c0e;
+  }
+  .works-frame iframe{width:100%;height:100%;border:0;display:block}
+
+  /* ---------- Section titles ---------- */
+  .section-title{
+    text-align:center;font-size:clamp(36px,4.6vw,58px);font-weight:800;
+    letter-spacing:-.5px;line-height:1.15;
+  }
+  .strike{color:#6b7280;text-decoration:line-through;text-decoration-thickness:5px}
+
+  /* ---------- Cost card ---------- */
+  .cost{padding:64px 24px 90px}
+  .cost .section-title{margin-bottom:52px}
+  .cost-card{
+    max-width:1060px;margin:0 auto;background:var(--card);
+    border-radius:22px;padding:clamp(32px,5vw,60px);
+  }
+  .cost-card h3{font-size:clamp(24px,2.6vw,32px);font-weight:700;margin-bottom:30px}
+  .cost-quote{
+    border-left:4px solid var(--blue-soft);padding:4px 0 4px 26px;margin-bottom:34px;
+    font-size:clamp(16px,1.7vw,19px);color:var(--text);line-height:1.75;
+  }
+  .cost-quote b{color:var(--blue);font-weight:700}
+  .cost-card p{
+    font-size:clamp(16px,1.7vw,19px);color:var(--muted);line-height:1.75;margin-bottom:34px;
+  }
+  .cost-callout{
+    background:var(--card-2);border-left:4px solid var(--blue-soft);
+    border-radius:0 14px 14px 0;padding:26px 32px;margin-bottom:34px;
+    font-size:clamp(16px,1.8vw,20px);font-weight:700;color:#fff;line-height:1.6;
+  }
+  .cost-good{color:var(--blue);font-weight:700;font-size:clamp(16px,1.7vw,19px);margin-bottom:0}
+
+  /* ---------- Process ---------- */
+  .process{border-top:1px solid #131518;border-bottom:1px solid #131518;padding:0 24px 100px}
+  .process-head{padding:90px 24px 0;text-align:center}
+  .process-sub{
+    text-align:center;color:#99a1ab;font-size:clamp(16px,1.9vw,22px);
+    margin:110px 0 70px;font-weight:400;
+  }
+  .steps{
+    max-width:1500px;margin:0 auto;display:grid;
+    grid-template-columns:repeat(4,1fr);gap:22px;
+  }
+  .step{
+    position:relative;background:#121417;border:1px solid #1d2025;border-radius:12px;
+    padding:30px 26px 34px;overflow:hidden;
+  }
+  .step .num{
+    position:absolute;top:10px;right:20px;
+    font-size:58px;font-weight:800;color:#24272c;line-height:1;
+  }
+  .step h4{color:var(--blue);font-size:20px;font-weight:700;margin:26px 0 18px;position:relative}
+  .step p{color:#9aa2ac;font-size:15.5px;line-height:1.7;position:relative}
+
+  /* ---------- CTA / Pricing ---------- */
+  .cta{padding:100px 24px 40px}
+  .cta .section-title{margin-bottom:56px}
+  .price-card{
+    max-width:552px;margin:0 auto;background:#101215;
+    border:1px solid rgba(47,185,247,.4);border-radius:16px;
+    padding:clamp(32px,5vw,48px) clamp(24px,4vw,42px);
+    box-shadow:0 0 60px rgba(31,182,255,.07);
+  }
+  .price-card .brand{text-align:center;font-size:26px;font-weight:700;margin-bottom:6px}
+  .price-card .price{text-align:center;font-size:clamp(30px,3.4vw,40px);font-weight:800;margin-bottom:34px}
+  .features{list-style:none;margin-bottom:34px}
+  .features li{
+    display:flex;align-items:center;gap:14px;
+    color:#d4d9de;font-size:16.5px;padding:9px 0;
+  }
+  .features .check{color:var(--blue);font-weight:700;font-size:18px;flex:none}
+  .price-divider{border:none;border-top:1px solid #22262b;margin:0 0 34px}
+  .contact-form input,.contact-form textarea{
+    width:100%;background:#0b0d0f;border:1px solid #22262b;border-radius:10px;
+    padding:16px 18px;margin-bottom:16px;color:var(--text);
+    font-family:'Poppins',sans-serif;font-size:15.5px;outline:none;
+    transition:border-color .2s;
+  }
+  .contact-form input:focus,.contact-form textarea:focus{border-color:var(--blue-soft)}
+  .contact-form ::placeholder{color:#7d858f}
+  .contact-form textarea{resize:vertical;min-height:92px}
+  .btn-connect{
+    width:100%;background:var(--blue);color:#02121c;border:none;border-radius:12px;
+    padding:18px;font-family:'Poppins',sans-serif;font-size:19px;font-weight:700;
+    cursor:pointer;margin-top:4px;
+    box-shadow:0 0 34px rgba(31,182,255,.45);
+    transition:transform .15s,box-shadow .2s;
+  }
+  .btn-connect:hover{transform:translateY(-1px);box-shadow:0 0 46px rgba(31,182,255,.6)}
+  .form-note{
+    margin-top:26px;color:#8d95a0;font-size:14.5px;line-height:1.7;text-align:center;
+  }
+  .form-success{
+    display:none;text-align:center;padding:26px 6px 6px;
+  }
+  .form-success .big{font-size:22px;font-weight:700;color:var(--blue);margin-bottom:12px}
+  .form-success p{color:#c3cad2;font-size:16px;line-height:1.7}
+  .sub-note{text-align:center;color:#6f7680;font-size:15px;margin:34px 0 0}
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:110px 24px 90px}
+  .faq .section-title{margin-bottom:60px}
+  .faq-list{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:32px 38px;
+  }
+  .faq-item h4{font-size:clamp(18px,2vw,22px);font-weight:700;margin-bottom:16px}
+  .faq-item p{color:#b9c0c9;font-size:clamp(15px,1.7vw,18px);line-height:1.75}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid #101215;padding:64px 24px 56px;text-align:center}
+  footer .logo{width:88px;height:auto;opacity:.85;margin-bottom:22px}
+  footer p{color:#6f7680;font-size:15px;line-height:1.8}
+
+  @media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){
+    .steps{grid-template-columns:1fr}
+    .process-sub{margin:70px 0 50px}
+    .faq-item{padding:26px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="assets/logo-trim.png" alt="VideoNook">
+  <div>
+    <span class="tagline-pill"><span class="dot"></span>Weekly Video Reels for the North Okanagan &amp; Shuswap</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-card">
+    <video autoplay muted loop playsinline poster="assets/VideoNook Thumbnail.jpg">
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Your Future Clients Are Already Scrolling.<span class="blue">They Just Haven't Found You Yet.</span></h1>
+      <p>Show up in their feed every week — without lifting a finger.</p>
+    </div>
+  </div>
+  <div class="scroll-arrow">↓</div>
+</section>
+
+<section class="works">
+  <div class="works-frame">
+    <iframe src="https://www.youtube.com/embed/A-ZZkJG1MOs?rel=0" title="How VideoNook Works"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="cost">
+  <h2 class="section-title">The Cost of Staying <span class="strike">Invisible</span></h2>
+  <div class="cost-card">
+    <h3>The Cost of Staying Invisible</h3>
+    <div class="cost-quote">You know the feeling. Another week without posting. The nagging thought: <b>"I really should…"</b></div>
+    <p>Meanwhile, your competitors are showing up. Week after week, their face is in the feed. They're not better than you — but when someone in your community is finally ready to buy, guess who comes to mind first?</p>
+    <div class="cost-callout">It's not the best. It's whoever they've been seeing. Whoever they feel like they already know.</div>
+    <p>A year from now, you won't regret becoming the face everyone recognizes. You'll regret staying invisible — knowing you almost did something about it.</p>
+    <p class="cost-good">The good news? It takes less than you think.</p>
+  </div>
+</section>
+
+<section class="process">
+  <div class="process-head">
+    <h2 class="section-title">Here's how I fix that.</h2>
+  </div>
+  <p class="process-sub">Simple, Efficient, Consistent content – Completely handled for you.</p>
+  <div class="steps">
+    <div class="step">
+      <span class="num">01</span>
+      <h4>Strategy Session</h4>
+      <p>A 30–minute call where I learn your business. I figure out what they need to hear.</p>
+    </div>
+    <div class="step">
+      <span class="num">02</span>
+      <h4>Scripting</h4>
+      <p>I write the scripts — in your voice. Strategic. Sequenced. Designed to build trust.</p>
+    </div>
+    <div class="step">
+      <span class="num">03</span>
+      <h4>Studio Session</h4>
+      <p>One hour a month. Professional setup. Teleprompter. I coach you through every take.</p>
+    </div>
+    <div class="step">
+      <span class="num">04</span>
+      <h4>Edited &amp; Delivered</h4>
+      <p>Polished, captioned, ready-to-post reels. One goes out every week. You stay visible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2 class="section-title">Ready to Stay Visible?</h2>
+  <div class="price-card">
+    <div class="brand">VideoNook</div>
+    <div class="price">Contact for Pricing</div>
+    <ul class="features">
+      <li><span class="check">✓</span>4 reels delivered monthly</li>
+      <li><span class="check">✓</span>Trust Architecture strategy</li>
+      <li><span class="check">✓</span>Done-for-you scripting</li>
+      <li><span class="check">✓</span>Monthly studio session</li>
+      <li><span class="check">✓</span>On-camera coaching</li>
+      <li><span class="check">✓</span>Edited with captions</li>
+    </ul>
+    <hr class="price-divider">
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone (Optional)">
+      <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
+      <button type="submit" class="btn-connect">Let's Connect</button>
+      <p class="form-note">Not sure if this is right for you? No pressure – just share your info and I'll reach out to answer any questions and see if VideoNook makes sense for your business.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="big">Thanks — message received!</div>
+      <p>I'll reach out shortly to answer your questions and see if VideoNook makes sense for your business.</p>
+    </div>
+  </div>
+  <p class="sub-note">Monthly subscription. Cancel anytime.</p>
+</section>
+
+<section class="faq">
+  <h2 class="section-title">Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h4>How is this different from hiring a videographer?</h4>
+      <p>A videographer just hits record. I bring 15 years of sales experience to the table. I don't just capture footage; I build a strategy to help you connect with clients and grow your business. We're not making 'disposable content' — we're building trust assets.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I have to come up with ideas?</h4>
+      <p>No. That's my job. During our strategy session, we'll uncover the questions your clients are already asking. I turn those into scripts. You just show up, read the teleprompter, and I coach you through it.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if I'm camera shy?</h4>
+      <p>Most people feel that way at first. The studio is set up to make it easy — teleprompter, good lighting, and I coach you through every take until it feels natural. By your second or third session, you won't think twice about it.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Where is the studio?</h4>
+      <p>The studio is conveniently located in the North Okanagan. There is plenty of on site parking and easy to access.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="logo" src="assets/logo-white-trim.png" alt="VideoNook">
+  <p>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = e.target;
+    var data = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:data
+    }).then(function(r){
+      if(r.ok){
+        form.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      }else{
+        alert('Something went wrong — please email info@rhythmproductions.ca');
+      }
+    }).catch(function(){
+      alert('Something went wrong — please email info@rhythmproductions.ca');
+    });
+  });
+</script>
+
+</body>
+</html>
