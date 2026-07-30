@@ -205,6 +205,13 @@
     transition:transform .15s,box-shadow .2s;
   }
   .btn-connect:hover{transform:translateY(-1px);box-shadow:0 0 46px rgba(31,182,255,.6)}
+  .btn-secondary{
+    width:100%;background:transparent;color:#c3cad2;border:2px solid #2a2e34;border-radius:12px;
+    padding:16px;font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;
+    cursor:pointer;margin-top:14px;transition:border-color .2s,color .2s;
+  }
+  .btn-secondary:hover{border-color:var(--blue);color:#fff}
+  .faq-item p+p{margin-top:14px}
   .form-note{
     margin-top:26px;color:#8d95a0;font-size:14.5px;line-height:1.7;text-align:center;
   }
@@ -285,7 +292,7 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Your Future Clients Are Already Scrolling.<span class="blue">They Just Haven't Found You Yet.</span></h1>
+      <h1>Your Future Clients Are Already Scrolling.<span class="blue">They're Seeing Someone Else.</span></h1>
       <p>Show up in their feed every week, without lifting a finger.</p>
     </div>
   </div>
@@ -314,7 +321,7 @@
   <div class="process-head">
     <h2 class="section-title">Here's how I fix that.</h2>
   </div>
-  <p class="process-sub">Simple, Efficient, Consistent content. Completely handled for you.</p>
+  <p class="process-sub">Consistent content, handled. Here's what a done-for-you month looks like.</p>
   <div class="steps">
     <div class="step">
       <span class="num">01</span>
@@ -324,12 +331,12 @@
     <div class="step">
       <span class="num">02</span>
       <h4>Scripting</h4>
-      <p>I write the scripts, in your voice. Strategic. Sequenced. Designed to build trust.</p>
+      <p>I write the scripts that move your business forward, then coach you through them.</p>
     </div>
     <div class="step">
       <span class="num">03</span>
       <h4>Studio Session</h4>
-      <p>One hour a month. Professional setup. Teleprompter. I coach you through every take.</p>
+      <p>One hour a month. Lights up, teleprompter loaded, everything ready before you walk in.</p>
     </div>
     <div class="step">
       <span class="num">04</span>
@@ -365,12 +372,13 @@
       <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
       <ul class="features">
         <li><span class="check">✓</span>4 reels delivered monthly</li>
-        <li><span class="check">✓</span>A content strategy built to move your business forward</li>
+        <li><span class="check">✓</span>A plan built around what your customers need to hear before they call you</li>
         <li><span class="check">✓</span>Done-for-you scripting</li>
         <li><span class="check">✓</span>Monthly one-hour studio session</li>
         <li><span class="check">✓</span>On-camera coaching</li>
         <li><span class="check">✓</span>Teleprompter available if needed</li>
         <li><span class="check">✓</span>Edited and captioned, post copy included</li>
+        <li><span class="check">✓</span>One round of revisions</li>
       </ul>
     </div>
     <div class="price-card">
@@ -386,6 +394,7 @@
         <li><span class="check">✓</span>Vertical single camera 1080p recording</li>
         <li><span class="check">✓</span>You walk out with your raw files</li>
       </ul>
+      <p class="sales-line" style="margin-bottom:0">You're not renting an empty room. Your session's run by a guy who's been filming professionally since 2018.</p>
     </div>
   </div>
   <div class="price-card form-card">
@@ -396,8 +405,10 @@
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone (Optional)">
       <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
-      <button type="submit" class="btn-connect">Ask a Question</button>
-      <p class="form-note">Not sure if this is right for you? No pressure. Just share your info and I'll reach out to answer any questions and see if VideoNook makes sense for your business.</p>
+      <input type="hidden" name="request-type" id="ctaChoice" value="Claim an August Spot">
+      <button type="submit" class="btn-connect" onclick="document.getElementById('ctaChoice').value='Claim an August Spot'">Claim an August Spot</button>
+      <button type="submit" class="btn-secondary" onclick="document.getElementById('ctaChoice').value='Just Asking a Question'">Just Asking a Question</button>
+      <p class="form-note">Monthly billing. Three-month minimum. Six spots at this rate, then it's $497 in January.</p>
     </form>
     <div class="form-success" id="formSuccess">
       <div class="big">Thanks! Message received.</div>
@@ -411,20 +422,42 @@
   <h2 class="section-title">Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
-      <h4>How is this different from hiring a videographer?</h4>
-      <p>A videographer just hits record. I bring over fifteen years of sales experience to the table. I don't just capture footage; I build a strategy to help you connect with clients and grow your business. We're not making disposable content. We're building trust assets.</p>
+      <h4>Do I need a script, or do I just show up?</h4>
+      <p>Depends which one you're on. On the done-for-you, I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it.</p>
+      <p>On the $197, bring whatever you've got. If there's a script, it's loaded before you sit down. If it's just ideas in your head, that works too. Plenty of people talk better than they write.</p>
     </div>
     <div class="faq-item">
-      <h4>Do I have to come up with ideas?</h4>
-      <p>No. That's my job. During our strategy session, we'll uncover the questions your clients are already asking. I turn those into scripts. You just show up, read the teleprompter, and I coach you through it.</p>
+      <h4>Why not just film these on my phone?</h4>
+      <p>You can. Plenty of people do it well. What changes in a room like this is how it gets received. Good light and clean audio move the way people read you before you've said a word. Same expertise, same advice, and it lands as professional instead of casual.</p>
+      <p>The bigger thing is that phones don't fail on quality. They fail on week six. You get busy, you skip one, then it's two, and it's done. This one's booked.</p>
     </div>
     <div class="faq-item">
       <h4>What if I'm camera shy?</h4>
-      <p>Most people feel that way at first. The studio is set up to make it easy: teleprompter, good lighting, and I coach you through every take until it feels natural. By your second or third session, you won't think twice about it.</p>
+      <p>Almost everyone says that. Here's the thing though, it's usually not confidence, it's the format. Talking to a phone on your dash, alone, with nobody reacting, is a strange thing to do. People who can present to a room of forty without blinking still freeze doing that.</p>
+      <p>In here there's someone across from you. The light's already right, the audio's already right, the teleprompter's there if you want it, and we go again until a take feels good. And nothing goes out that you haven't looked at first.</p>
     </div>
     <div class="faq-item">
-      <h4>Where is the studio?</h4>
-      <p>The studio's in Armstrong. Tons of parking, easy highway access.</p>
+      <h4>Do you post them for me?</h4>
+      <p>You get everything ready to go. Edited, captioned, post copy and hashtags written. You upload it, which takes about two minutes.</p>
+      <p>If you'd rather not touch it at all, ask me. There's a way to handle that.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's the difference between the two content options?</h4>
+      <p>$497 is the month built for you. $197 is the room and the gear.</p>
+      <p>If you already know what you want to say and you just need it to look and sound right, save the money. If the hard part is figuring out what to say, that's the other one.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What happens after three months?</h4>
+      <p>Nothing automatic. Three months is the minimum because one month of reels doesn't do anything, and I'd rather say that upfront than take your money for a month. After that it's month to month.</p>
+      <p>Book in August and you hold $397 for as long as you stay on it, through December 31. That's in writing when you sign.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How is this different from hiring a videographer?</h4>
+      <p>A videographer hits record. I've got over fifteen years of sales behind me, so before the camera comes out I want to know why your customers pick you. The month gets built around that.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I see the studio first?</h4>
+      <p>Come look at it. It's in Armstrong, tons of parking, easy highway access. Fill out the form and say you want to see the room.</p>
     </div>
   </div>
 </section>
@@ -465,6 +498,12 @@
         "@type": "Organization",
         "name": "Rhythm Productions"
       },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "VideoNook Services",
@@ -472,7 +511,7 @@
           {
             "@type": "Offer",
             "name": "We record your reels",
-            "description": "Done-for-you weekly video reels: 4 reels delivered monthly, content strategy, scripting, monthly one-hour studio session, on-camera coaching, teleprompter, editing, captions, and post copy.",
+            "description": "Done-for-you weekly video reels: 4 reels delivered monthly, a plan built around what your customers need to hear, scripting, monthly one-hour studio session, on-camera coaching, teleprompter, editing, captions, post copy, and one round of revisions.",
             "price": "397",
             "priceCurrency": "CAD",
             "priceSpecification": {"@type": "UnitPriceSpecification", "price": "397", "priceCurrency": "CAD", "unitText": "per month"}
@@ -502,23 +541,43 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How is this different from hiring a videographer?",
-          "acceptedAnswer": {"@type": "Answer", "text": "A videographer just hits record. I bring over fifteen years of sales experience to the table. I don't just capture footage; I build a strategy to help you connect with clients and grow your business. We're not making disposable content. We're building trust assets."}
+          "name": "Do I need a script, or do I just show up?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Depends which one you're on. On the done-for-you, I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it. On the $197, bring whatever you've got. If there's a script, it's loaded before you sit down. If it's just ideas in your head, that works too. Plenty of people talk better than they write."}
         },
         {
           "@type": "Question",
-          "name": "Do I have to come up with ideas?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No. That's my job. During our strategy session, we'll uncover the questions your clients are already asking. I turn those into scripts. You just show up, read the teleprompter, and I coach you through it."}
+          "name": "Why not just film these on my phone?",
+          "acceptedAnswer": {"@type": "Answer", "text": "You can. Plenty of people do it well. What changes in a room like this is how it gets received. Good light and clean audio move the way people read you before you've said a word. Same expertise, same advice, and it lands as professional instead of casual. The bigger thing is that phones don't fail on quality. They fail on week six. You get busy, you skip one, then it's two, and it's done. This one's booked."}
         },
         {
           "@type": "Question",
           "name": "What if I'm camera shy?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Most people feel that way at first. The studio is set up to make it easy: teleprompter, good lighting, and I coach you through every take until it feels natural. By your second or third session, you won't think twice about it."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Almost everyone says that. It's usually not confidence, it's the format. Talking to a phone on your dash, alone, with nobody reacting, is a strange thing to do. In here there's someone across from you. The light's already right, the audio's already right, the teleprompter's there if you want it, and we go again until a take feels good. And nothing goes out that you haven't looked at first."}
         },
         {
           "@type": "Question",
-          "name": "Where is the studio?",
-          "acceptedAnswer": {"@type": "Answer", "text": "The studio's in Armstrong. Tons of parking, easy highway access."}
+          "name": "Do you post them for me?",
+          "acceptedAnswer": {"@type": "Answer", "text": "You get everything ready to go. Edited, captioned, post copy and hashtags written. You upload it, which takes about two minutes. If you'd rather not touch it at all, ask me. There's a way to handle that."}
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between the two content options?",
+          "acceptedAnswer": {"@type": "Answer", "text": "$497 is the month built for you. $197 is the room and the gear. If you already know what you want to say and you just need it to look and sound right, save the money. If the hard part is figuring out what to say, that's the other one."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after three months?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Nothing automatic. Three months is the minimum because one month of reels doesn't do anything. After that it's month to month. Book in August and you hold $397 for as long as you stay on it, through December 31. That's in writing when you sign."}
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from hiring a videographer?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A videographer hits record. I've got over fifteen years of sales behind me, so before the camera comes out I want to know why your customers pick you. The month gets built around that."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see the studio first?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Come look at it. It's in Armstrong, tons of parking, easy highway access. Fill out the form and say you want to see the room."}
         }
       ]
     },
