@@ -59,7 +59,7 @@
   .choose p{color:#ffffff;font-size:32px;font-weight:700;margin-bottom:20px;line-height:1.3}
   .choose-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 16px}
   .choose-btn{
-    display:inline-block;min-width:315px;padding:24px 34px;border-radius:14px;
+    display:inline-block;min-width:240px;padding:24px 30px;border-radius:14px;
     font-size:24px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
     text-decoration:none;text-align:center;transition:all .2s;
   }
@@ -69,7 +69,7 @@
   }
   .choose-btn.inactive{border:2px solid #2a2e34;color:#c3cad2}
   .choose-btn.inactive:hover{border-color:var(--blue);color:#fff}
-  @media(max-width:760px){.choose-btn{min-width:170px;flex:1;font-size:20px;padding:20px 20px}}
+  @media(max-width:900px){.choose-btn{min-width:150px;flex:1;font-size:20px;padding:20px 16px}}
 
   /* ---------- Hero ---------- */
   .hero{padding:36px 24px 0}
@@ -181,6 +181,11 @@
   .pcard-title{text-align:center;font-size:clamp(21px,2.3vw,26px);font-weight:700;margin-bottom:20px}
   .pcard-body{color:#c3cad2;font-size:16px;line-height:1.8}
   .form-card{max-width:552px;margin:22px auto 0}
+  .spot-counter{max-width:552px;margin:22px auto 0;text-align:center}
+  .spot-bar{height:12px;background:#1b1e23;border:1px solid #22262b;border-radius:999px;overflow:hidden}
+  .spot-fill{height:100%;background:#ff9330;border-radius:999px;box-shadow:0 0 18px rgba(255,147,48,.55)}
+  .spot-count{margin-top:10px;color:#ff9330;font-weight:700;font-size:16.5px}
+  .spot-note{margin-top:8px;color:#8d95a0;font-size:14px;line-height:1.7}
   .features{list-style:none;margin-bottom:34px}
   .features li{
     display:flex;align-items:center;gap:14px;
@@ -277,10 +282,11 @@
     <span class="tagline-pill"><span class="dot"></span>Video Podcast &amp; Content Studio for the North Okanagan &amp; Shuswap</span>
   </div>
   <nav class="choose">
-    <p>Are you here for weekly reels, or a podcast?</p>
+    <p>What are you here for?</p>
     <div class="choose-btns">
       <a class="choose-btn active" href="/">Reels</a>
       <a class="choose-btn inactive" href="/podcast/">Podcast</a>
+      <a class="choose-btn inactive" href="/legacy/">Legacy</a>
     </div>
   </nav>
 </header>
@@ -321,12 +327,12 @@
   <div class="process-head">
     <h2 class="section-title">Here's how I fix that.</h2>
   </div>
-  <p class="process-sub">Consistent content, handled. Here's what a done-for-you month looks like.</p>
+  <p class="process-sub">Consistent content, handled. Here's what a month looks like.</p>
   <div class="steps">
     <div class="step">
       <span class="num">01</span>
       <h4>Strategy Session</h4>
-      <p>A 30-minute call where I learn your business. I figure out what they need to hear.</p>
+      <p>We start with a session where I learn your business and what your customers need to hear before they call you. Then a half hour after every monthly shoot, so the next month's reels come out of a plan instead of a guess.</p>
     </div>
     <div class="step">
       <span class="num">02</span>
@@ -360,38 +366,27 @@
 
 <section class="cta" id="contact">
   <h2 class="section-title">Ready to Stay Visible?</h2>
-  <div class="price-row">
-    <div class="price-card">
-      <div class="pcard-title">We record your reels</div>
-      <div class="price-block">
-        <div class="now">$397/month</div>
-        <div class="special">Written, coached, shot, edited, captioned, post copy included.</div>
-        <div class="spots">6 spots. That's how many I can bring on at once without the quality dropping.</div>
-      </div>
-      <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
-      <ul class="features">
-        <li><span class="check">✓</span>4 reels delivered monthly</li>
-        <li><span class="check">✓</span>A plan built around what your customers need to hear before they call you</li>
-        <li><span class="check">✓</span>Monthly one-hour studio session</li>
-        <li><span class="check">✓</span>Teleprompter available if needed</li>
-        <li><span class="check">✓</span>One round of revisions</li>
-      </ul>
+  <div class="price-card">
+    <div class="pcard-title">We record your reels</div>
+    <div class="price-block">
+      <div class="now">$297/month</div>
+      <div class="special">Founding rate. Written, coached, shot, edited, captioned, post copy included.</div>
+      <div class="spots">Ten founding spots, locked at this rate for twelve months. After that the rate is $397.</div>
     </div>
-    <div class="price-card">
-      <div class="pcard-title">You record your reels</div>
-      <div class="price-block">
-        <div class="now">$197/mo</div>
-      </div>
-      <p class="sales-line">You bring the ideas and do the talking. We run the gear.</p>
-      <ul class="features">
-        <li><span class="check">✓</span>A 30-minute studio session every month</li>
-        <li><span class="check">✓</span>We run the camera, lights, and sound</li>
-        <li><span class="check">✓</span>Teleprompter's set up if you've got a script</li>
-        <li><span class="check">✓</span>Vertical single camera 1080p recording</li>
-        <li><span class="check">✓</span>You walk out with your raw files</li>
-      </ul>
-      <p class="sales-line" style="margin-bottom:0">You're not renting an empty room. Your session's run by a guy who's been filming professionally since 2018.</p>
-    </div>
+    <p class="sales-line">I spent a decade in industrial sales before I ever picked up a camera. That's the strategy I bring to your messaging.</p>
+    <ul class="features">
+      <li><span class="check">✓</span>4 reels delivered monthly</li>
+      <li><span class="check">✓</span>A plan built around what your customers need to hear before they call you</li>
+      <li><span class="check">✓</span>Monthly one-hour studio session</li>
+      <li><span class="check">✓</span>A half hour of strategy after every shoot</li>
+      <li><span class="check">✓</span>Teleprompter available if needed</li>
+      <li><span class="check">✓</span>One round of revisions</li>
+    </ul>
+  </div>
+  <div class="spot-counter">
+    <div class="spot-bar"><div class="spot-fill" style="width:90%"></div></div>
+    <div class="spot-count">9 of 10 founding spots left</div>
+    <p class="spot-note">Ten spots. Past that I'm either turning work away or doing it worse, and I'd rather turn it away.</p>
   </div>
   <div class="price-card form-card">
     <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
@@ -401,10 +396,10 @@
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone (Optional)">
       <textarea name="message" placeholder="Anything you want me to know? (Optional)"></textarea>
-      <input type="hidden" name="request-type" id="ctaChoice" value="Claim an August Spot">
-      <button type="submit" class="btn-connect" onclick="document.getElementById('ctaChoice').value='Claim an August Spot'">Claim an August Spot</button>
+      <input type="hidden" name="request-type" id="ctaChoice" value="Claim a Founding Spot">
+      <button type="submit" class="btn-connect" onclick="document.getElementById('ctaChoice').value='Claim a Founding Spot'">Claim a Founding Spot</button>
       <button type="submit" class="btn-secondary" onclick="document.getElementById('ctaChoice').value='Just Asking a Question'">Just Asking a Question</button>
-      <p class="form-note">Monthly billing. Three-month minimum. Six spots in the August intake.</p>
+      <p class="form-note">Monthly billing. Three-month minimum. Nine founding spots left.</p>
     </form>
     <div class="form-success" id="formSuccess">
       <div class="big">Thanks! Message received.</div>
@@ -418,8 +413,7 @@
   <div class="faq-list">
     <div class="faq-item">
       <h4>Do I need a script, or do I just show up?</h4>
-      <p>Depends which one you're on. On the done-for-you, I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it.</p>
-      <p>On the $197, bring whatever you've got. If there's a script, it's loaded before you sit down. If it's just ideas in your head, that works too. Plenty of people talk better than they write.</p>
+      <p>I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it. If you'd rather work off your own ideas, bring them and we'll shape them in the room.</p>
     </div>
     <div class="faq-item">
       <h4>Why not just film these on my phone?</h4>
@@ -437,17 +431,12 @@
       <p>If you'd rather not touch it at all, ask me. There's a way to handle that.</p>
     </div>
     <div class="faq-item">
-      <h4>What's the difference between the two content options?</h4>
-      <p>$397 is the month built for you. $197 is the room and the gear.</p>
-      <p>If you already know what you want to say and you just need it to look and sound right, save the money. If the hard part is figuring out what to say, that's the other one.</p>
-    </div>
-    <div class="faq-item">
       <h4>What happens after three months?</h4>
       <p>Nothing automatic. Three months is the minimum because one month of reels doesn't do anything, and I'd rather say that upfront than take your money for a month. After that it's month to month.</p>
     </div>
     <div class="faq-item">
       <h4>How is this different from hiring a videographer?</h4>
-      <p>A videographer hits record. I've got over fifteen years of sales behind me, so before the camera comes out I want to know why your customers pick you. The month gets built around that.</p>
+      <p>A videographer hits record. I spent a decade in industrial sales, so before the camera comes out I want to know why your customers pick you. The month gets built around that.</p>
     </div>
     <div class="faq-item">
       <h4>Can I see the studio first?</h4>
@@ -460,8 +449,8 @@
 
 <footer>
   <img class="logo" src="assets/logo-white-trim.png" alt="VideoNook">
-  <p><a href="/podcast/" style="color:#8d95a0;text-decoration:none">Podcast Studio</a></p>
-  <p>A Rhythm Productions studio.<br>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap</p>
+  <p><a href="/" style="color:#8d95a0;text-decoration:none">Reels</a> &nbsp;·&nbsp; <a href="/podcast/" style="color:#8d95a0;text-decoration:none">Podcast</a> &nbsp;·&nbsp; <a href="/legacy/" style="color:#8d95a0;text-decoration:none">Legacy</a></p>
+  <p>A Rhythm Productions studio.<br>© 2026 VideoNook. All rights reserved.<br>Serving the North Okanagan &amp; Shuswap<br>Armstrong, BC</p>
 </footer>
 
 <script type="application/ld+json">
@@ -507,18 +496,10 @@
           {
             "@type": "Offer",
             "name": "We record your reels",
-            "description": "Done-for-you weekly video reels: 4 reels delivered monthly, a plan built around what your customers need to hear, scripting, monthly one-hour studio session, on-camera coaching, teleprompter, editing, captions, post copy, and one round of revisions.",
-            "price": "397",
+            "description": "Done-for-you weekly video reels: 4 reels delivered monthly, a plan built around what your customers need to hear, scripting, monthly one-hour studio session, a half hour of strategy after every shoot, on-camera coaching, teleprompter, editing, captions, post copy, and one round of revisions. Founding rate, ten spots, locked for twelve months; $397/month after.",
+            "price": "297",
             "priceCurrency": "CAD",
-            "priceSpecification": {"@type": "UnitPriceSpecification", "price": "397", "priceCurrency": "CAD", "unitText": "per month"}
-          },
-          {
-            "@type": "Offer",
-            "name": "You record your reels",
-            "description": "A 30-minute studio session every month. You bring the ideas and do the talking; we run the camera, lights, and sound. Vertical single camera 1080p recording, raw files included.",
-            "price": "197",
-            "priceCurrency": "CAD",
-            "priceSpecification": {"@type": "UnitPriceSpecification", "price": "197", "priceCurrency": "CAD", "unitText": "per month"}
+            "priceSpecification": {"@type": "UnitPriceSpecification", "price": "297", "priceCurrency": "CAD", "unitText": "per month"}
           },
           {
             "@type": "Offer",
@@ -538,7 +519,7 @@
         {
           "@type": "Question",
           "name": "Do I need a script, or do I just show up?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Depends which one you're on. On the done-for-you, I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it. On the $197, bring whatever you've got. If there's a script, it's loaded before you sit down. If it's just ideas in your head, that works too. Plenty of people talk better than they write."}
+          "acceptedAnswer": {"@type": "Answer", "text": "I write them. We talk first, I find out what your customers keep asking you, and those become the scripts. You read off the teleprompter and I coach you through it. If you'd rather work off your own ideas, bring them and we'll shape them in the room."}
         },
         {
           "@type": "Question",
@@ -557,18 +538,13 @@
         },
         {
           "@type": "Question",
-          "name": "What's the difference between the two content options?",
-          "acceptedAnswer": {"@type": "Answer", "text": "$397 is the month built for you. $197 is the room and the gear. If you already know what you want to say and you just need it to look and sound right, save the money. If the hard part is figuring out what to say, that's the other one."}
-        },
-        {
-          "@type": "Question",
           "name": "What happens after three months?",
           "acceptedAnswer": {"@type": "Answer", "text": "Nothing automatic. Three months is the minimum because one month of reels doesn't do anything. After that it's month to month."}
         },
         {
           "@type": "Question",
           "name": "How is this different from hiring a videographer?",
-          "acceptedAnswer": {"@type": "Answer", "text": "A videographer hits record. I've got over fifteen years of sales behind me, so before the camera comes out I want to know why your customers pick you. The month gets built around that."}
+          "acceptedAnswer": {"@type": "Answer", "text": "A videographer hits record. I spent a decade in industrial sales, so before the camera comes out I want to know why your customers pick you. The month gets built around that."}
         },
         {
           "@type": "Question",
