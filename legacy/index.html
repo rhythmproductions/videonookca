@@ -82,6 +82,14 @@
     font-weight:400;max-width:760px;line-height:1.65;
   }
 
+  /* ---------- Video ---------- */
+  .works{padding:40px 24px 10px}
+  .works-frame{
+    max-width:900px;margin:0 auto;aspect-ratio:16/9;
+    border-radius:20px;overflow:hidden;background:#0a0c0e;
+  }
+  .works-frame iframe{width:100%;height:100%;border:0;display:block}
+
   /* ---------- Section titles ---------- */
   .section-title{
     text-align:center;font-size:clamp(32px,4.2vw,50px);font-weight:800;
@@ -190,6 +198,14 @@
 <section class="hero">
   <h1>Record Their Stories <span class="blue">in Their Own Voice</span></h1>
   <p>You've heard them a hundred times. How they met. What this town looked like back then. The one that comes out at every Christmas dinner. This is a room in Armstrong where you can sit down with them and finally get it recorded.</p>
+</section>
+
+<section class="works">
+  <div class="works-frame">
+    <iframe src="https://www.youtube.com/embed/Qlh6L1EBmug?rel=0" title="Legacy sessions at VideoNook"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
 </section>
 
 <section class="how">
@@ -391,6 +407,14 @@
           "acceptedAnswer": {"@type": "Answer", "text": "Sooner than feels necessary. That's the honest answer."}
         }
       ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://videonook.ca/legacy/#video",
+      "name": "Legacy sessions at VideoNook",
+      "description": "Legacy recording sessions at VideoNook in Armstrong, BC, where families record their parents' and grandparents' stories.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Qlh6L1EBmug/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/Qlh6L1EBmug"
     }
   ]
 }
